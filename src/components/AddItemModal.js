@@ -1,6 +1,6 @@
 import React from 'react'
 import { compose, withProps, withState, withHandlers } from 'recompose'
-import { Icon, Modal, Form } from 'semantic-ui-react'
+import { Modal, Form, Button } from 'semantic-ui-react'
 import moment from 'moment'
 
 const availableCategroies = ['personal', 'insurance', 'food', 'etc.']
@@ -25,10 +25,10 @@ const AddItemModal = ({
 }) => (
   <Modal
     open={modalOpen}
-    trigger={<Icon onClick={() => setModalOpen(true)} name="add" />}
+    trigger={<Button onClick={() => setModalOpen(true)} icon="add" />}
     onClose={() => setModalOpen(false)}
   >
-    <Modal.Header>Add Item</Modal.Header>
+    <Modal.Header>Add Transaction</Modal.Header>
     <Modal.Content>
       <Modal.Description>
         <Form>
